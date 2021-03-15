@@ -2,7 +2,7 @@
 
 ## OkCorp, London | 1/2015-7/2017
 
-working very hard as a JANITOR and got paid BIG
+working very hard as a *JANITOR* and got paid **BIG**
 dollars. Very cool experience.
 
 # Education

@@ -63,10 +63,10 @@ parseSingleText = Normal <$> some (noneOf "#*")
   <|> Italic <$> parseItalic
 
 parseBold :: Parser String
-parseBold = symbol "**" *> some alphaNumChar <* symbol "**"
+parseBold = chunk "**" *> some alphaNumChar <* chunk "**"
 
 parseItalic :: Parser String
-parseItalic = symbol "*" *> some alphaNumChar <* symbol "*"
+parseItalic = chunk "*" *> some alphaNumChar <* chunk "*"
 
 -- | Parse time.
 time :: Parser Time
