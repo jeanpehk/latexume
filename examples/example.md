@@ -18,3 +18,4 @@ Undergraduate's degree in computer science.
 ## low-iq hi school, High School | 7/2014-5/2018
 
 High school education.
+

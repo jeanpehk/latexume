@@ -47,8 +47,9 @@ genTex (Resume name opts sections) =
 
 genSection :: Section -> String
 genSection (Section header subsections) =
-  "\\section{" ++ header ++ "}\n\n"
-  ++ concat (map genSubSection subsections) ++ "\n\n"
+  "\\section{" ++ header ++ "}"
+  ++ "\n\n"
+  ++ concat (map genSubSection subsections)
 
 genSubSection :: SubSection -> String
 genSubSection (SubSection header from to content) =
@@ -56,6 +57,7 @@ genSubSection (SubSection header from to content) =
   ++ "{" ++ genTime from
   ++ "--"
   ++ maybeTimeStr to ++ "}"
+  ++ "\n\n"
   ++ concat (map lxToTex content)
 
 genTime :: Time -> String
@@ -66,7 +68,8 @@ genTime (Time month year) =
 -- Helpers
 ----------------------------------------------------------------
 
--- A base start for the documents. Takes a name, email, and github.
+-- A base start for the documents.
+-- Takes a name and a list of optional info.
 start :: String -> [String] -> String
 start name opts =
   "\\documentclass[paper=a4, fontsize=11pt]{resume}" ++ "\n\n"
