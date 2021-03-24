@@ -21,7 +21,7 @@ $ stack build
 
 ## Generate LaTeX:
 
-Generate file "generated/latexume.tex" from "resume.md":
+Generate `latexume.tex` from `resume.md` to folder `generated/`:
 
 ```bash
 $ stack exec latexume resume.md "inputfile.md" "Your Name" "email@mail.com" "otherOptional" "info"
