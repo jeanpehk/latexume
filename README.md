@@ -13,13 +13,13 @@ Can be used as is or as a base for further extension.
 
 ## Build
 
-stack:
+This project uses stack.
 
 ```bash
 $ stack build
 ```
 
-## Generate:
+## Generate
 
 Generate `latexume.tex` from `resume.md` to folder `generated/`:
 
