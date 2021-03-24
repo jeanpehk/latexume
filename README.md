@@ -13,7 +13,7 @@ Can be used as is or as a base for further extension.
 
 ## Build
 
-With stack:
+stack:
 
 ```bash
 $ stack build
