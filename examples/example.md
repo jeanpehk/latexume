@@ -1,3 +1,10 @@
+---
+name: Just Me
+info:
+- me@mail.com
+- github.com/u
+---
+
 # Experience
 
 ## OkCorp, London | 1/2015-7/2017
@@ -7,11 +14,11 @@ dollars. Very cool experience.
 
 # Education
 
-## University Of OK, MSc | 3/2021-
+## University Of OK, MSc | 3/2020-
 
 Master's degree in computer science.
 
-## University Of OK, BSc | 1/2017-3/2021
+## University Of OK, BSc | 1/2017-3/2020
 
 Undergraduate's degree in computer science.
 

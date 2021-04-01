@@ -24,7 +24,7 @@ $ stack build
 Generate `latexume.tex` from `resume.md` to folder `generated/`:
 
 ```bash
-$ stack exec latexume resume.md "inputfile.md" "Your Name" "email@mail.com" "otherOptional" "info"
+$ stack exec latexume resume.md "inputfile.md"
 ```
 
 Generate a .pdf from .tex:
@@ -36,6 +36,21 @@ $ pdflatex generated/latexume.tex
 
 List of commands available.
 Everything else you will need to provide with LaTeX.
+
+### PERSONAL INFO
+
+Give personal information as a markdown (well.. GFM markdown) table.
+Name required, other info is optional.
+
+Example:
+```
+---
+name: My Name
+info:
+- me@mail.com
+- github.com/me
+---
+```
 
 ### SECTION
 

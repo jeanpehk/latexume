@@ -5,14 +5,14 @@ name = latexume
 all:
 	pdflatex generated/$(name).tex
 
+# Generate an example
 example:
 	@echo generating an example .tex and .pdf to: examples/
-	@echo .................................................
 	@echo
 	@echo stack:
 	@echo ======
 	@echo
-	stack exec latexume "examples/example.md" "Just Me" "me@mail.com" "github.com/me"
+	stack exec latexume "examples/example.md"
 	@echo
 	@echo pdflatex:
 	@echo =========

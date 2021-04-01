@@ -11,8 +11,6 @@ import qualified Text.Megaparsec.Char.Lexer as L
 
 type Parser = Parsec Void String
 type Name = String
-type Email = String
-type Opt = String
 
 -- | Helpers for parsing.
 
@@ -28,9 +26,34 @@ symbol = L.symbol skip
 num :: Parser Int
 num = lexeme L.decimal
 
+-- | Parse personal information.
+parseInfos :: Parser (Name, [String])
+parseInfos = do
+  symbol "---"
+  symbol "name"
+  symbol ":"
+  n <- lexeme $ many (anySingleBut '\n')
+  opts <- parseOptionals
+  symbol "---"
+  return $ (n, opts)
+
+parseOptionals :: Parser [String]
+parseOptionals = do
+  symbol "info"
+  symbol ":"
+  many parseInfo
+
+parseInfo :: Parser String
+parseInfo =
+  try $
+  symbol "-"
+  *> notFollowedBy (symbol "-")
+  *> lexeme (many (anySingleBut '\n'))
+
 -- | Parse a resume.
-parseResume :: Name -> [Opt] -> Parser Resume
-parseResume name opts = do
+parseResume :: Parser Resume
+parseResume = do
+  (name, opts) <- parseInfos
   s <- many parseSection
   return $ Resume name opts s
 
