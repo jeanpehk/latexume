@@ -19,15 +19,15 @@ This project uses stack.
 $ stack build
 ```
 
-## Generate LaTeX:
+## Generate
 
-Generate file "generated/latexume.tex" from "resume.md":
+Generate `latexume.tex` from `resume.md` to folder `generated/`:
 
 ```bash
 $ stack exec latexume resume.md "inputfile.md" "Your Name" "email@mail.com" "otherOptional" "info"
 ```
 
-Generate a pdf from .tex:
+Generate a .pdf from .tex:
 ```bash
 $ pdflatex generated/latexume.tex
 ```
