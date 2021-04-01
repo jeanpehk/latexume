@@ -24,6 +24,8 @@ example:
 	@echo
 	mv generated/$(name).tex examples/$(name).tex
 	mv $(name).pdf examples/$(name).pdf
+	rm $(name).aux
+	rm $(name).log
 
 clean:
 	rm *.aux *.log examples/*.aux examples/*.log *.pdf generated/*
